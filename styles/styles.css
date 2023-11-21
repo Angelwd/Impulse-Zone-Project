@@ -1,16 +1,36 @@
 body {
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     text-align: center;
+    height: 100vh;
     margin: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-end;
 }
 
 #story {
+    background-color: black;
+    font-size: 24px;
+    display: flex;
     margin-bottom: 20px;
+    color: whitesmoke;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-end;
+
 }
 
 #options {
     display: flex;
     justify-content: center;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-end;
+
 }
 
 button {
