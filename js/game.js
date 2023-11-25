@@ -180,7 +180,7 @@ const scenes = {
         story: "The detective goes silent, it seems to be confirming something.",
         options: [
             { text: "Stay silent", nextScene: 23 },
-            { text: "There was a talking cat", nextScene: 16 } //vent scene
+            { text: "There was a talking cat", nextScene: 27 } //vent scene
         ]
     },
     23: {
@@ -188,7 +188,7 @@ const scenes = {
         story: "So you admit to stealing security codes from RYOCORP...",
         options: [
             { text: "What? No! I just work there.", nextScene: 24 },
-            { text: "I, I didn't know. I just downloaded some files...", nextScene: 16 }
+            { text: "I, I didn't know. I just downloaded some files...", nextScene: 25 }
         ]
     },
     24: {
@@ -235,72 +235,177 @@ const scenes = {
         background: "images/reference56.png",
         story: "You hear a faint meow. It's coming from the air vent",
         options: [
-            { text: "You again?!", nextScene: 20 },
-            { text: "What is going on?", nextScene: 16 }
+            { text: "You again?!", nextScene: 30 },
+            { text: "Am I dreaming?", nextScene: 2 }
         ]
     },
     30: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference51.png",
+        story: "Why did you answer the door? I told you we had to go.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "I, well I still can't believe I'm having a conversation with a cat", nextScene: 31 },
+            { text: "...", nextScene: 31 }
         ]
     },
     31: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference51.png",
+        story: "We really need to go. The cop should be back at any minute. ",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "Trust the cat and climb the vent.", nextScene: 32 },
+            { text: "Stay in the interrogation room", nextScene: 5 }
         ]
     },
     32: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference58.png",
+        story: "The two of you make your way through the air vents. The cat seems to know the way.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "I need answers, I need a lot of answers.", nextScene: 33 },
+            // { text: "There was a talking cat", nextScene: 16 }
         ]
     },
     33: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference58.png",
+        story: "You will get all the answers but right now we need to get out of here.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "...", nextScene: 34 },
+            // { text: "There was a talking cat", nextScene: 16 }
         ]
     },
     34: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference59.jpg",
+        story: "The two of you make it out of the vents. You find yourself in an alley.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "Follow the cat", nextScene: 35 },
+            { text: "You're free! Run away.", nextScene: 5 }
         ]
     },
     35: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference59.jpg",
+        story: "You follow the cat through several blocks. Until you reach a door at the end of an alley.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "...", nextScene: 36 },
+            // { text: "There was a talking cat", nextScene: 16 }
         ]
     },
     36: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/reference64.jpg",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
         ]
     },
     37: {
-        background: "images/reference30.png",
-        story: "The room is cold. Youn did nothing wrong but yet you feel uneasy...",
+        background: "images/scene1.jpg",
+        story: "It's pitch black. You start having second thoughts but after a couple of steps, you start seeing some light.",
         options: [
-            { text: "Please, you got the wrong person!", nextScene: 20 },
-            { text: "There was a talking cat", nextScene: 16 }
+            { text: "Go further", nextScene: 38 },
+            { text: "Go back", nextScene: 5 }
+        ]
+    },
+    38: {
+        background: "images/reference36.jpg",
+        story: "You have reached a room that your mind can't quite comprehend. There's a meeting going on, a cat meeting.",
+        options: [
+            { text: "Say nothing", nextScene: 39 },
+            { text: "This is not real", nextScene: 2 }
+        ]
+    },
+    39: {
+        background: "images/reference36.jpg",
+        story: "They all stop talking and turn to you with interest.",
+        options: [
+            { text: "Huh, hello?", nextScene: 40 },
+            // { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    40: {
+        background: "images/reference36.jpg",
+        story: "An orange cat that seems to be the leader says welcome #AC1089. We have been expecting you.",
+        options: [
+            { text: "Expecting me?", nextScene: 41 },
+            // { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    41: {
+        background: "images/reference68.png",
+        story: "Yes. we know this is hard for you to understand at the moment. We will try to answer all your questions but we don't have much time.",
+        options: [
+            { text: "I have so many questions!", nextScene: 43 },
+            { text: "Who are you?", nextScene: 42 }
+        ]
+    },
+    42: {
+        background: "images/reference68.png",
+        story: "My name is Alpha. The one that escorted you here is Psi. Pleasure to make your acquaintance. You will know everyone else in due time.",
+        options: [
+            { text: "I have so many questions!", nextScene: 43 },
+        ]
+    },
+    43: {
+        background: "images/reference68.png",
+        story: "I'll try to answer as much as I can but we don't have much time.",
+        options: [
+            { text: "You can talk?", nextScene: 44 },
+            { text: "Why am I Here?", nextScene: 45 },
+            { text: "What is going on?", nextScene: 46 },
+            { text: "Who are you?", nextScene: 47 }
+        ]
+    },
+    44: {
+        background: "images/reference68.png",
+        story: "Alpha chuckles, his eyes gleaming with a mischievous glint. Well, my friend, let's just say I've got a few high-tech upgrades courtesy of some experimental tinkering. BioSynth Corporation didn't just stop at creating lab-made cats, you know. They gave me the gift of gab and a knack for decoding the city's secrets. Now, enough about me. We've got a corporation to take down, and time's ticking. Ready for the next move?",
+        options: [
+            { text: "I have so many questions", nextScene: 43 },
+            { text: "I'm ready", nextScene: 43 },//next scene
+        ]
+    },
+    45: {
+        background: "images/reference68.png",
+        story: "Your skills,your unique talents, and the data you posess from their server are the missing pieces to this puzzle. We're up against a behemoth, and the more allies we gather, the better our chances. Together, we can bring down BioSynth Corporation and expose their dark machinations. So, what do you say?",
+        options: [
+            { text: "I have so many questions", nextScene: 43 },
+            { text: "I'm ready", nextScene: 43 },//next scene
+        ]
+    },
+    46: {
+        background: "images/reference68.png",
+        story: "BioSynth Corporation, the puppet master behind the scenes, has been conducting experiments that would make your hair stand on end. Lab-made cats, like our friends here, enhanced and manipulated for purposes we're only beginning to unravel.",
+        options: [
+            { text: "I have so many questions", nextScene: 43 },
+            { text: "I'm ready", nextScene: 43 },//next scene
+        ]
+    },
+    47: {
+        background: "images/reference68.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    48: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    49: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    50: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
         ]
     },
 };
