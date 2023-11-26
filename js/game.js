@@ -4,6 +4,20 @@ const optionsElement = document.getElementById('options');
 // Initial game state
 let currentScene = 1;
 
+//Declare an empty variable for the player name
+// let playerName = "";
+
+
+// function getPlayerName() {
+//     playerName = prompt("Enter your name:");
+//     if (!playerName) {
+//         playerName = "Player"; // Default name if the player doesn't enter anything
+//     }
+// }
+
+// getPlayerName()
+
+
 // Define the game scenes
 const scenes = {
     1: {
@@ -185,7 +199,7 @@ const scenes = {
     },
     23: {
         background: "images/reference30.png",
-        story: "So you admit to stealing security codes from RYOCORP...",
+        story: "So you admit to stealing security codes from BioSynth Corporation?",
         options: [
             { text: "What? No! I just work there.", nextScene: 24 },
             { text: "I, I didn't know. I just downloaded some files...", nextScene: 25 }
@@ -321,7 +335,7 @@ const scenes = {
     },
     40: {
         background: "images/reference36.jpg",
-        story: "An orange cat that seems to be the leader says welcome #AC1089. We have been expecting you.",
+        story: `An orange cat that seems to be the leader says welcome ${playerName}. We have been expecting you.`,
         options: [
             { text: "Expecting me?", nextScene: 41 },
             // { text: "Walk away", nextScene: 5 }
@@ -347,9 +361,10 @@ const scenes = {
         story: "I'll try to answer as much as I can but we don't have much time.",
         options: [
             { text: "You can talk?", nextScene: 44 },
-            { text: "Why am I Here?", nextScene: 45 },
+            { text: "Why me?", nextScene: 45 },
             { text: "What is going on?", nextScene: 46 },
-            { text: "Who are you?", nextScene: 47 }
+            { text: "Who are you?", nextScene: 47 },
+            { text: "I'm ready", nextScene: 48 } //next scene
         ]
     },
     44: {
@@ -357,7 +372,7 @@ const scenes = {
         story: "Alpha chuckles, his eyes gleaming with a mischievous glint. Well, my friend, let's just say I've got a few high-tech upgrades courtesy of some experimental tinkering. BioSynth Corporation didn't just stop at creating lab-made cats, you know. They gave me the gift of gab and a knack for decoding the city's secrets. Now, enough about me. We've got a corporation to take down, and time's ticking. Ready for the next move?",
         options: [
             { text: "I have so many questions", nextScene: 43 },
-            { text: "I'm ready", nextScene: 43 },//next scene
+            { text: "I'm ready", nextScene: 48 },//next scene
         ]
     },
     45: {
@@ -365,7 +380,7 @@ const scenes = {
         story: "Your skills,your unique talents, and the data you posess from their server are the missing pieces to this puzzle. We're up against a behemoth, and the more allies we gather, the better our chances. Together, we can bring down BioSynth Corporation and expose their dark machinations. So, what do you say?",
         options: [
             { text: "I have so many questions", nextScene: 43 },
-            { text: "I'm ready", nextScene: 43 },//next scene
+            { text: "I'm ready", nextScene: 48 },//next scene
         ]
     },
     46: {
@@ -373,20 +388,20 @@ const scenes = {
         story: "BioSynth Corporation, the puppet master behind the scenes, has been conducting experiments that would make your hair stand on end. Lab-made cats, like our friends here, enhanced and manipulated for purposes we're only beginning to unravel.",
         options: [
             { text: "I have so many questions", nextScene: 43 },
-            { text: "I'm ready", nextScene: 43 },//next scene
+            { text: "I'm ready", nextScene: 48 },//next scene
         ]
     },
     47: {
         background: "images/reference68.png",
-        story: "The door seems to unlock as soon as the cat gets close to it.",
+        story: "My lab name is Alpha, I'm a genetically engineered cat made in a lab by BioSynth Corporation. They have been experimenting on animals for decades but finally got a breakthrough with cats sometime last year. I cannot begin to tell you the horros that are happening in there. I was the first one, there were more, way more. The ones you see here are part of the lucky few I was able to rescue. They will continue to make atrocities until someone stops them. This is where you come in. ",
         options: [
-            { text: "Go inside", nextScene: 37 },
-            { text: "Walk away", nextScene: 5 }
+            { text: "I have so many questions", nextScene: 43 },
+            { text: "I'm ready", nextScene: 48 } //next scene
         ]
     },
     48: {
-        background: "images/reference64.png",
-        story: "The door seems to unlock as soon as the cat gets close to it.",
+        background: "images/reference68.png",
+        story: "I knew we could count on you. Psi will go over the details. Don't fail us. We only have one shot at this",
         options: [
             { text: "Go inside", nextScene: 37 },
             { text: "Walk away", nextScene: 5 }
