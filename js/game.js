@@ -403,11 +403,19 @@ const scenes = {
         background: "images/reference68.png",
         story: "I knew we could count on you. Psi will go over the details. Don't fail us. We only have one shot at this",
         options: [
-            { text: "Go inside", nextScene: 37 },
-            { text: "Walk away", nextScene: 5 }
+            { text: "Let's get started", nextScene: 49 },
+            // { text: "Walk away", nextScene: 5 }
         ]
     },
     49: {
+        background: "images/scene1.jpg",
+        story: "You are being briefed by cats on a mission to take down an evil corporation, just a few hours ago you were sleeping at your apartment. You just realized that life comes at you hard. ",
+        options: [
+            { text: "...", nextScene: 50 },
+            // { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    51: {
         background: "images/reference64.png",
         story: "The door seems to unlock as soon as the cat gets close to it.",
         options: [
@@ -415,7 +423,79 @@ const scenes = {
             { text: "Walk away", nextScene: 5 }
         ]
     },
-    50: {
+    52: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    53: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    54: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    55: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    56: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    57: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    58: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    59: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    60: {
+        background: "images/reference64.png",
+        story: "The door seems to unlock as soon as the cat gets close to it.",
+        options: [
+            { text: "Go inside", nextScene: 37 },
+            { text: "Walk away", nextScene: 5 }
+        ]
+    },
+    61: {
         background: "images/reference64.png",
         story: "The door seems to unlock as soon as the cat gets close to it.",
         options: [
