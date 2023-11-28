@@ -2,7 +2,7 @@ const storyElement = document.getElementById('story');
 const optionsElement = document.getElementById('options');
 
 // Initial game state
-let currentScene = 1;
+let currentScene = 63;
 
 // Declare an empty variable for the player name
 let playerName = "";
@@ -1232,109 +1232,910 @@ function startGame() {
             background: "images/reference45.png",
             story: "You find yourself in a room with multiple computers. You can go 3 different ways.You also notice a big poster on the wall. ",
             options: [
-                { text: "Go forward", nextScene: 64 },
-                { text: "Go left", nextScene: 65 },
-                { text: "Go right", nextScene: 66 },
+                { text: "Go forward", nextScene: 200 },
+                { text: "Go left", nextScene: 64 },
+                { text: "Go right", nextScene: 217 },
                 { text: "Look at the poster", nextScene: 63 }
             ]
         },
         63: {
-            background: "images/greekabc.jpeg",
-            story: "After taking a good look, you notice that you can only go 3 different ways... ",
+            background: "images/greekabcupdated.png",
+            story: "",
             options: [
-                { text: "Go forward", nextScene: 64 },
-                { text: "Go left", nextScene: 65 },
-                { text: "Go right", nextScene: 66 },
+                { text: "Back to the room", nextScene: 62 },
+                // { text: "Go left", nextScene: 65 },
+                // { text: "Go right", nextScene: 66 },
             ]
         },
         64: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway2.png",
+            story: "There is along hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 65 },
+                { text: "Go Back", nextScene: 62 },
+                // { text: "Go right", nextScene: 66 },
+                // { text: "Start Over", nextScene: 66 },
             ]
         },
         65: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/reference38.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Psi Door 2: Beta Door 3: Alpha",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Psi", nextScene: 64 },
+                { text: "Beta", nextScene: 66 },
+                { text: "Alpha", nextScene: 66 },
+                { text: "Start Over", nextScene: 62 },
             ]
         },
         66: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway4.png",
+            story: "There is a long hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 67 },
+                { text: "Go back", nextScene: 65 }
             ]
         },
         67: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Kappa Door 2: Tau Door 3: Iota",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Kappa", nextScene: 64 },
+                { text: "Tau", nextScene: 66 },
+                { text: "Iota", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
             ]
         },
         68: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway1.png",
+            story: "There is a long hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 69 },
+                { text: "Go back", nextScene: 67 }
             ]
         },
         69: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/reference43.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Chi Door 3: Omicron",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Alpha", nextScene: 64 },
+                { text: "Chi", nextScene: 66 },
+                { text: "Omicron", nextScene: 70 },
+                { text: "Start Over", nextScene: 62 },
             ]
         },
         70: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway3.png",
+            story: "There is a long hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 71 },
+                { text: "Go back", nextScene: 69 }
             ]
         },
         71: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/reference41.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Zeta Door 2: Fie Door 3: Omega",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Zeta", nextScene: 72 },
+                { text: "Fie", nextScene: 66 },
+                { text: "Omega", nextScene: 70 },
+                { text: "Start Over", nextScene: 62 },
             ]
         },
         72: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway2.png",
+            story: "There is a long hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 73 },
+                { text: "Go back", nextScene: 71 }
             ]
         },
         73: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/reference49.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Op-Silon Door 3: Xi",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Rho", nextScene: 72 },
+                { text: "Op-Silon", nextScene: 74 },
+                { text: "Xi", nextScene: 70 },
+                { text: "Start Over", nextScene: 62 },
             ]
         },
         74: {
-            background: "images/reference64.png",
-            story: "The door seems to unlock as soon as the cat gets close to it.",
+            background: "images/hallway4.png",
+            story: "There is a long hallway",
             options: [
-                { text: "Go inside", nextScene: 37 },
-                { text: "Walk away", nextScene: 5 }
+                { text: "Go forward", nextScene: 75 },
+                { text: "Go back", nextScene: 73 }
             ]
         },
+        75: {
+            background: "images/reference47.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Theta Door 2: Pi Door 3: Nu",
+            options: [
+                { text: "Theta", nextScene: 72 },
+                { text: "Pi", nextScene: 74 },
+                { text: "Nu", nextScene: 76 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        76: {
+            background: "images/hallway10.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 77 },
+                { text: "Go back", nextScene: 75}
+            ]
+        },
+        77: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Lambda Door 2: Tau 3: Alpha",
+            options: [
+                { text: "Lambda", nextScene: 72 },
+                { text: "Tau", nextScene: 78 },
+                { text: "Alpha", nextScene: 76 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        78: {
+            background: "images/hallway12.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 79 },
+                { text: "Go back", nextScene: 77}
+            ]
+        },
+        79: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Eta Door 2: Mu 3: Omega",
+            options: [
+                { text: "Eta", nextScene: 80 },
+                { text: "Mu", nextScene: 78 },
+                { text: "Omega", nextScene: 76 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        80: {
+            background: "images/hallway11.jpg",
+            story: "There is a long hallway with a strange light glowing at the end.",
+            options: [
+                { text: "Go forward", nextScene: 81 },
+                { text: "Go back", nextScene: 79}
+            ]
+        },
+        81: {
+            background: "images/serverroom1.png",
+            story: "You find yourself in a giant room. It seems to be the server room. At last!",
+            options: [
+                { text: "Find the control room", nextScene: 82 },
+                { text: "", nextScene: 78 },
+                { text: "Omega", nextScene: 76 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        82: {
+            background: "images/computerroom1.png",
+            story: "This is it! We need to erase all the data. ",
+            options: [
+                { text: "Hack into their systems", nextScene: 83 },
+                { text: "", nextScene: 78 },
+                { text: "Omega", nextScene: 76 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        83: {
+            background: "images/reference26.png",
+            story: "Psi connects a device into one of the computers.",
+            options: [
+                { text: "...", nextScene: 84 },
+                // { text: "", nextScene: 78 },
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        84: {
+            background: "images/reference26.png",
+            story: "Done! Let's get out of here!",
+            options: [
+                { text: "We need to rescue the others!", nextScene: 85 },//find the others
+                { text: "Agreed. Let's go before we get caught!", nextScene: 78 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        85: {
+            background: "images/reference26.png",
+            story: "Right! Let's hurry!",
+            options: [
+                { text: "We need to rescue the others!", nextScene: 86 },//find the others
+                { text: "Agreed. Let's go before we get caught!", nextScene: 78 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },  
+        86: {
+            background: "images/hallway12.jpg",
+            story: "This is it. That door leads to the lab.",
+            options: [
+                { text: "Go inside", nextScene: 87 },//find the others
+                { text: "Forget it. We don't have much time.", nextScene: 62 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        87: {
+            background: "images/labpic.png",
+            story: "You finally reach the lab. There are several cages.",
+            options: [
+                { text: "Rescue the animals and escape", nextScene: 88 },//find the others
+                { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        88: {
+            background: "images/freedcats.png",
+            story: "They're finally free. Let's head out!",
+            options: [
+                { text: "Escape the BioSynth facility", nextScene: 89 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        89: {
+            background: "images/guardschasing.png",
+            story: "You are running as fast as you can, you can feel the guards getting closer. You see the exit door at the end",
+            options: [
+                { text: "Go through the door", nextScene: 90 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        90: {
+            background: "images/scene1.jpg",
+            story: "You make it out. You follow Psi for several blocks until you're finally back at the hideout. ",
+            options: [
+                { text: "...", nextScene: 91 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        91: {
+            background: "images/scene1.jpg",
+            story: "BioZynth is done. You spend several days with the cats until everything calms down. You adopt Psi and go back to your apartment to try and live a normal life.",
+            options: [
+                { text: "...", nextScene: 92 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        92: {
+            background: "images/scene1.jpg",
+            story: "BioZynth is done. You spend several days with the cats until everything calms down. You adopt Psi and go back to your apartment to try and live a normal life.",
+            options: [
+                { text: "...", nextScene: 93 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        93: {
+            background: "images/reference11.jpg",
+            story: "Life seems calm. At last, everything is back to normal. Or is it?",
+            options: [
+                { text: "...", nextScene: 94 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        94: {
+            background: "images/evilcats.png",
+            story: "",
+            options: [
+                { text: "...", nextScene: 5 },//find the others
+                // { text: "Turn back. Not much time", nextScene: 86 },//escape
+                // { text: "Omega", nextScene: 76 },
+                // { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        200: {
+            background: "images/hallway4.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 201 },
+                { text: "Go back", nextScene: 62 }
+            ]
+        }, 
+        201: {
+            background: "images/reference44.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Psi Door 2: '2' Door 3: Omega",
+            options: [
+                { text: "Psi", nextScene: 64 },
+                { text: "2", nextScene: 202 },
+                { text: "Omega", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },  
+        202: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 203 },
+                { text: "Go back", nextScene: 201 }
+            ]
+        },
+        203: {
+            background: "images/reference48.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '9' Door 2: Delta Door 3: Gamma",
+            options: [
+                { text: "9", nextScene: 204 },
+                { text: "Delta", nextScene: 202 },
+                { text: "Gamma", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        204: {
+            background: "images/hallway8.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 205 },
+                { text: "Go back", nextScene: 203 }
+            ]
+        }, 
+        205: {
+            background: "images/reference50.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '15' Door 2: Kappa Door 3: '18'",
+            options: [
+                { text: "15", nextScene: 206 },
+                { text: "Kappa", nextScene: 202 },
+                { text: "18", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        206: {
+            background: "images/hallway3.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 207 },
+                { text: "Go back", nextScene: 205 }
+            ]
+        }, 
+        207: {
+            background: "images/reference43.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '20' Door 2: '6' Door 3: Iota",
+            options: [
+                { text: "20", nextScene: 207 },
+                { text: "6", nextScene: 208 },
+                { text: "Iota", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        208: {
+            background: "images/hallway5.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 209 },
+                { text: "Go back", nextScene: 207 }
+            ]
+        }, 
+        209: {
+            background: "images/reference43.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '20' Door 2: Alpha 3: '13'",
+            options: [
+                { text: "20", nextScene: 210 },
+                { text: "Alpha", nextScene: 202 },
+                { text: "13", nextScene: 68 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        210: {
+            background: "images/hallway1.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 211 },
+                { text: "Go back", nextScene: 209 }
+            ]
+        }, 
+        211: {
+            background: "images/reference44.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Omicron Door 2: '7' Door 3: '13'",
+            options: [
+                { text: "Omicron", nextScene: 210 },
+                { text: "7", nextScene: 202 },
+                { text: "13", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        212: {
+            background: "images/hallway2.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 213 },
+                { text: "Go back", nextScene: 211 }
+            ]
+        }, 
+        213: {
+            background: "images/reference41.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '6' Door 2: '19' Door 3: Xi",
+            options: [
+                { text: "6", nextScene: 210 },
+                { text: "19", nextScene: 214 },
+                { text: "Xi", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        214: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 215 },
+                { text: "Go back", nextScene: 213 }
+            ]
+        },
+        215: {
+            background: "images/reference48.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '7' Door 2: Beta Door 3: '2'",
+            options: [
+                { text: "7", nextScene: 216 },
+                { text: "Beta", nextScene: 214 },
+                { text: "2", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        216: {
+            background: "images/hallway11.jpg",
+            story: "There is a long hallway with a strange light glowing at the end...",
+            options: [
+                { text: "Go forward", nextScene: 81 },
+                { text: "Go back", nextScene: 215 }
+            ]
+        }, 
+        217: {
+            background: "images/hallway11.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 218 },
+                { text: "Go back", nextScene: 62 }
+            ]
+        },
+        218: {
+            background: "images/reference48.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Omega Door 3: '13'",
+            options: [
+                { text: "Alpha", nextScene: 219 },
+                { text: "Omega", nextScene: 214 },
+                { text: "13", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        219: {
+            background: "images/hallway8.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 220 },
+                { text: "Go back", nextScene: 218 }
+            ]
+        },
+        220: {
+            background: "images/reference47.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Delta Door 2: Beta Door 3: '9'",
+            options: [
+                { text: "Delta", nextScene: 219 },
+                { text: "Beta", nextScene: 221 },
+                { text: "9", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        221: {
+            background: "images/hallway9.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 222 },
+                { text: "Go back", nextScene: 220 }
+            ]
+        },
+        222: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Op-silon Door 2: Gamma Door 3: '8'",
+            options: [
+                { text: "Op-silon", nextScene: 219 },
+                { text: "Gamma", nextScene: 223 },
+                { text: "8", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        223: {
+            background: "images/hallway2.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 224 },
+                { text: "Go back", nextScene: 222 }
+            ]
+        },
+        224: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Delta Door 2: '15' Door 3: '7'",
+            options: [
+                { text: "Delta", nextScene: 225 },
+                { text: "15", nextScene: 223 },
+                { text: "7", nextScene: 212 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        225: {
+            background: "images/hallway1.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 226 },
+                { text: "Go back", nextScene: 224 }
+            ]
+        },
+        226: {
+            background: "images/reference49.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '12' Door 2: Psi Door 3: Epsilon",
+            options: [
+                { text: "12", nextScene: 225 },
+                { text: "Psi", nextScene: 223 },
+                { text: "Epsilon", nextScene: 227 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        227: {
+            background: "images/hallway4.png",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 228 },
+                { text: "Go back", nextScene: 226 }
+            ]
+        },
+        228: {
+            background: "images/reference49.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Zeta Door 2: '13' Door 3: Sigma",
+            options: [
+                { text: "Zeta", nextScene: 229 },
+                { text: "13", nextScene: 223 },
+                { text: "Sigma", nextScene: 227 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        229: {
+            background: "images/hallway5.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 230 },
+                { text: "Go back", nextScene: 228 }
+            ]
+        },
+        230: {
+            background: "images/reference44.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '19' Door 2: Eta Door 3: Delta",
+            options: [
+                { text: "19", nextScene: 229 },
+                { text: "Eta", nextScene: 231 },
+                { text: "Delta", nextScene: 227 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        231: {
+            background: "images/hallway6.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 232 },
+                { text: "Go back", nextScene: 230 }
+            ]
+        },
+        232: {
+            background: "images/reference50.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Theta Door 3: '2'",
+            options: [
+                { text: "Rho", nextScene: 229 },
+                { text: "Theta", nextScene: 233 },
+                { text: "2", nextScene: 227 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        233: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 234 },
+                { text: "Go back", nextScene: 232 }
+            ]
+        },
+        234: {
+            background: "images/reference46.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '20' Door 2: Epsilon Door 3: Iota",
+            options: [
+                { text: "20", nextScene: 229 },
+                { text: "Epsilon", nextScene: 233 },
+                { text: "Iota", nextScene: 235 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        235: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 236 },
+                { text: "Go back", nextScene: 234 }
+            ]
+        },
+        236: {
+            background: "images/reference43.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Tau Door 2: '19' Door 3: Kappa",
+            options: [
+                { text: "Tau", nextScene: 229 },
+                { text: "19", nextScene: 233 },
+                { text: "Kappa", nextScene: 237 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        237: {
+            background: "images/hallway12.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 238 },
+                { text: "Go back", nextScene: 236 }
+            ]
+        },
+        238: {
+            background: "images/reference41.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '6' Door 2: Mu Door 3: Lambda",
+            options: [
+                { text: "6", nextScene: 229 },
+                { text: "Mu", nextScene: 233 },
+                { text: "Lambda", nextScene: 239 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        239: {
+            background: "images/hallway6.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 240 },
+                { text: "Go back", nextScene: 238 }
+            ]
+        },
+        240: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Mu Door 2: Nu Door 3: '7'",
+            options: [
+                { text: "Mu", nextScene: 241 },
+                { text: "Nu", nextScene: 233 },
+                { text: "7", nextScene: 239 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        241: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 242 },
+                { text: "Go back", nextScene: 240 }
+            ]
+        },
+        242: {
+            background: "images/reference47.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Mu Door 2: '13' Door 3: Nu",
+            options: [
+                { text: "Mu", nextScene: 241 },
+                { text: "13", nextScene: 233 },
+                { text: "Nu", nextScene: 243 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        243: {
+            background: "images/hallway8.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 244 },
+                { text: "Go back", nextScene: 242 }
+            ]
+        },
+        244: {
+            background: "images/reference47.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Xi Door 3: '33'",
+            options: [
+                { text: "Alpha", nextScene: 241 },
+                { text: "Xi", nextScene: 245 },
+                { text: "33", nextScene: 243 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        245: {
+            background: "images/hallway9.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 246 },
+                { text: "Go back", nextScene: 242 }
+            ]
+        },
+        246: {
+            background: "images/reference44.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Omicron Door 2: Pi Door 3: '21'",
+            options: [
+                { text: "Omicron", nextScene: 247 },
+                { text: "Pi", nextScene: 245 },
+                { text: "21", nextScene: 243 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        247: {
+            background: "images/hallway10.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 248 },
+                { text: "Go back", nextScene: 246 }
+            ]
+        },
+        248: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '2' Door 2: Pi Door 3: Iota",
+            options: [
+                { text: "2", nextScene: 247 },
+                { text: "Pi", nextScene: 249 },
+                { text: "Iota", nextScene: 243 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        249: {
+            background: "images/hallway12.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 250 },
+                { text: "Go back", nextScene: 248 }
+            ]
+        },
+        250: {
+            background: "images/reference48.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Eta Door 3: '8'",
+            options: [
+                { text: "Rho", nextScene: 251 },
+                { text: "Eta", nextScene: 249 },
+                { text: "8", nextScene: 243 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        251: {
+            background: "images/hallway6.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 252 },
+                { text: "Go back", nextScene: 250 }
+            ]
+        },
+        252: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Chi Door 2: '7' Door 3: Sigma",
+            options: [
+                { text: "Chi", nextScene: 251 },
+                { text: "7", nextScene: 249 },
+                { text: "Sigma", nextScene: 253 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        253: {
+            background: "images/hallway7.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 254 },
+                { text: "Go back", nextScene: 252 }
+            ]
+        },
+        254: {
+            background: "images/reference41.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Tau Door 2: '20' Door 3: Sigma",
+            options: [
+                { text: "Tau", nextScene: 255 },
+                { text: "20", nextScene: 249 },
+                { text: "Sigma", nextScene: 253 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        }, 
+        255: {
+            background: "images/hallway8.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 256 },
+                { text: "Go back", nextScene: 254 }
+            ]
+        },
+        256: {
+            background: "images/reference47.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Op-Silon Door 2: Psi Door 3: '4'",
+            options: [
+                { text: "Op-Silon", nextScene: 257 },
+                { text: "Psi", nextScene: 249 },
+                { text: "4", nextScene: 253 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        257: {
+            background: "images/hallway9.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 258 },
+                { text: "Go back", nextScene: 256 }
+            ]
+        }, 
+        258: {
+            background: "images/reference49.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '15' Door 2: Fie Door 3: Theta",
+            options: [
+                { text: "15", nextScene: 240 },
+                { text: "Fie", nextScene: 259 },
+                { text: "Theta", nextScene: 253 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        259: {
+            background: "images/hallway9.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 260 },
+                { text: "Go back", nextScene: 258 }
+            ]
+        }, 
+        260: {
+            background: "images/reference46.png",
+            story: "You find yourself in a room with 3 doors. Door 1: '18' Door 2: Chi Door 3: Alpha",
+            options: [
+                { text: "18", nextScene: 240 },
+                { text: "Chi", nextScene: 261 },
+                { text: "Alpha", nextScene: 253 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        261: {
+            background: "images/hallway10.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 262 },
+                { text: "Go back", nextScene: 260 }
+            ]
+        }, 
+        262: {
+            background: "images/reference43.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Omega Door 2: '5' Door 3: Psi",
+            options: [
+                { text: "Omega", nextScene: 240 },
+                { text: "5", nextScene: 261 },
+                { text: "Psi", nextScene: 263 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        263: {
+            background: "images/hallway12.jpg",
+            story: "There is a long hallway",
+            options: [
+                { text: "Go forward", nextScene: 264 },
+                { text: "Go back", nextScene: 262 }
+            ]
+        }, 
+        264: {
+            background: "images/reference40.png",
+            story: "You find yourself in a room with 3 doors. Door 1: Omega Door 2: '26' Door 3: Alpha",
+            options: [
+                { text: "Omega", nextScene: 265 },
+                { text: "26", nextScene: 261 },
+                { text: "Alpha", nextScene: 263 },
+                { text: "Start Over", nextScene: 62 },
+            ]
+        },
+        265: {
+            background: "images/hallway11.jpg",
+            story: "There is a long hallway with a strange light glowing at the end.",
+            options: [
+                { text: "Go forward", nextScene: 62 },
+                { text: "Go back", nextScene: 264}
+            ]
+        },
+        
+         
+                                                                                                                                                                                                           
         
     };
 
