@@ -2,13 +2,14 @@ const storyElement = document.getElementById('story');
 const optionsElement = document.getElementById('options');
 window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
-    audio.volume = 0.2;
+    audio.volume = 0.1;
     audio.play();
+
   });
 
 
 // Initial game state
-let currentScene = 1;
+let currentScene = 62;
 
 // Declare an empty variable for the player name
 let playerName = "";
@@ -25,7 +26,7 @@ nameButton.addEventListener('click', () => {
     console.log("Name Input ===>", nameInput.value)
     playerName = `${nameInput.value}`
     if (!playerName) {
-        playerName = "Player"; // Default name if the player doesn't enter anything
+        playerName = "Stranger"; // Default name if the player doesn't enter anything
     }
     setTimeout(() => {
         inputDiv.remove()
@@ -85,7 +86,9 @@ function startGame() {
             options: [
                 { text: "Answer the door", nextScene: 4 },
                 { text: "Walk to your balcony", nextScene: 6 }
-            ]
+            ],
+            countdownDuration: 10, // Set the countdown duration for this scene in seconds (10 seconds in this example)
+        stopCountdownOnTransition: true,
         },
         4: {
             background: "./images/reference16.jpg",
@@ -98,7 +101,7 @@ function startGame() {
         },
         5: {
             background: "./images/gameover.png",
-            story: "I guess you don't know anything about adventures...",
+            story: `What were you thinking ${playerName}?`,
             options: [
                 { text: "Start over", nextScene: 1 }
             ]
@@ -160,7 +163,7 @@ function startGame() {
         },
         13: {
             background: "./images/reference68.jpg",
-            story: `Citizen ${playerName} you are under arrest. Comply or force will be used.`,
+            story: `${playerName} you are under arrest. Comply or force will be used.`,
             options: [
                 { text: "Put your hands up", nextScene: 15 },
                 { text: "You start running towards the balcony!", nextScene: 14 },
@@ -580,17 +583,27 @@ function startGame() {
         },
         62: {
             background: "./images/reference45.png",
-            story: "You find yourself in a room with multiple computers. You can go 3 different ways.You also notice a big poster on the wall. ",
+            story: "You find yourself in a room with multiple computers. You can go 3 different ways.You also notice 2 posters on the wall. ",
             options: [
                 { text: "Go forward", nextScene: 200 },
                 { text: "Go left", nextScene: 64 },
                 { text: "Go right", nextScene: 217 },
-                { text: "Look at the poster", nextScene: 63 }
+                { text: "Look at the poster on the right", nextScene: 63 },
+                { text: "Look at the poster on the left", nextScene: 301 }
             ]
         },
         63: {
             background: "./images/greekabcupdated.png",
             story: "",
+            options: [
+                { text: "Back to the room", nextScene: 62 },
+                // { text: "Go left", nextScene: 65 },
+                // { text: "Go right", nextScene: 66 },
+            ]
+        },
+        301: {
+            background: "./images/poster2.png",
+            story: "It seems the Symbols have a numeric value. BioZynth always had an affinity for greek characters...",
             options: [
                 { text: "Back to the room", nextScene: 62 },
                 // { text: "Go left", nextScene: 65 },
@@ -611,9 +624,9 @@ function startGame() {
             background: "./images/reference38.png",
             story: "You find yourself in a room with 3 doors. Door 1: '2' Door 2: Beta Door 3: Alpha",
             options: [
-                { text: "2", nextScene: 64 },
+                { text: "2", nextScene: 208 },
                 { text: "Beta", nextScene: 66 },
-                { text: "Alpha", nextScene: 66 },
+                { text: "Alpha", nextScene: 213 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -627,10 +640,10 @@ function startGame() {
         },
         67: {
             background: "./images/reference40.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Kappa Door 2: Tau Door 3: Iota",
+            story: "You find yourself in a room with 3 doors. Door 1: Kappa Door 2: '13' Door 3: Iota",
             options: [
-                { text: "Kappa", nextScene: 64 },
-                { text: "Tau", nextScene: 66 },
+                { text: "Kappa", nextScene: 223 },
+                { text: "13", nextScene: 204 },
                 { text: "Iota", nextScene: 68 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -645,10 +658,10 @@ function startGame() {
         },
         69: {
             background: "./images/reference43.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Chi Door 3: Omicron",
+            story: "You find yourself in a room with 3 doors. Door 1: '9' Door 2: Chi Door 3: Omicron",
             options: [
-                { text: "Alpha", nextScene: 64 },
-                { text: "Chi", nextScene: 66 },
+                { text: "9", nextScene: 210 },
+                { text: "Chi", nextScene: 233 },
                 { text: "Omicron", nextScene: 70 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -663,11 +676,11 @@ function startGame() {
         },
         71: {
             background: "./images/reference41.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Zeta Door 2: Fie Door 3: Omega",
+            story: "You find yourself in a room with 3 doors. Door 1: Zeta Door 2: '20' Door 3: Omega",
             options: [
                 { text: "Zeta", nextScene: 72 },
-                { text: "Fie", nextScene: 66 },
-                { text: "Omega", nextScene: 70 },
+                { text: "20", nextScene: 245 },
+                { text: "Omega", nextScene: 66 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -681,11 +694,11 @@ function startGame() {
         },
         73: {
             background: "./images/reference49.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Op-Silon Door 3: Xi",
+            story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Op-Silon Door 3: '6'",
             options: [
-                { text: "Rho", nextScene: 72 },
+                { text: "Rho", nextScene: 251 },
                 { text: "Op-Silon", nextScene: 74 },
-                { text: "Xi", nextScene: 70 },
+                { text: "6", nextScene: 212 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -699,10 +712,10 @@ function startGame() {
         },
         75: {
             background: "./images/reference47.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Theta Door 2: Pi Door 3: Nu",
+            story: "You find yourself in a room with 3 doors. Door 1: '15' Door 2: Pi Door 3: Nu",
             options: [
-                { text: "Theta", nextScene: 72 },
-                { text: "Pi", nextScene: 74 },
+                { text: "15", nextScene: 70 },
+                { text: "Pi", nextScene: 219 },
                 { text: "Nu", nextScene: 76 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -717,11 +730,11 @@ function startGame() {
         },
         77: {
             background: "./images/reference40.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Lambda Door 2: Tau 3: Alpha",
+            story: "You find yourself in a room with 3 doors. Door 1: Lambda Door 2: Tau 3: '13'",
             options: [
-                { text: "Lambda", nextScene: 72 },
+                { text: "Lambda", nextScene: 70 },
                 { text: "Tau", nextScene: 78 },
-                { text: "Alpha", nextScene: 76 },
+                { text: "13", nextScene: 229 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -735,11 +748,11 @@ function startGame() {
         },
         79: {
             background: "./images/reference40.png",
-            story: "You find yourself in a room with 3 doors. Door 1: Eta Door 2: Mu 3: Omega",
+            story: "You find yourself in a room with 3 doors. Door 1: Eta Door 2: '8' 3: Omega",
             options: [
                 { text: "Eta", nextScene: 80 },
-                { text: "Mu", nextScene: 78 },
-                { text: "Omega", nextScene: 76 },
+                { text: "8", nextScene: 243 },
+                { text: "Omega", nextScene: 66 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -786,7 +799,7 @@ function startGame() {
             story: "Done! Let's get out of here!",
             options: [
                 { text: "We need to rescue the others!", nextScene: 85 },//find the others
-                { text: "Agreed. Let's go before we get caught!", nextScene: 78 },//escape
+                { text: "Agreed. Let's go before we get caught!", nextScene: 5 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
             ]
@@ -795,8 +808,8 @@ function startGame() {
             background: "./images/reference26.png",
             story: "Right! Let's hurry!",
             options: [
-                { text: "We need to rescue the others!", nextScene: 86 },//find the others
-                { text: "Agreed. Let's go before we get caught!", nextScene: 78 },//escape
+                { text: "Let's go", nextScene: 86 },//find the others
+                // { text: "Agreed. Let's go before we get caught!", nextScene: 78 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
             ]
@@ -806,7 +819,7 @@ function startGame() {
             story: "This is it. That door leads to the lab.",
             options: [
                 { text: "Go inside", nextScene: 87 },//find the others
-                { text: "Forget it. We don't have much time.", nextScene: 62 },//escape
+                { text: "Forget it. We don't have much time.", nextScene: 5 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
             ]
@@ -816,7 +829,7 @@ function startGame() {
             story: "You finally reach the lab. There are several cages.",
             options: [
                 { text: "Rescue the animals and escape", nextScene: 88 },//find the others
-                { text: "Turn back. Not much time", nextScene: 86 },//escape
+                { text: "Turn back. Not much time", nextScene: 5 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
             ]
@@ -835,7 +848,8 @@ function startGame() {
             background: "./images/guardschasing.png",
             story: "You are running as fast as you can, you can feel the guards getting closer. You see the exit door at the end",
             options: [
-                { text: "Go through the door", nextScene: 90 },//find the others
+                { text: "Go through the door", nextScene: 90 },
+                { text: "Stay and fight", nextScene: 5 }//find the others
                 // { text: "Turn back. Not much time", nextScene: 86 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
@@ -855,22 +869,22 @@ function startGame() {
             background: "./images/scene1.jpg",
             story: "BioZynth is done. You spend several days with the cats until everything calms down. You adopt Psi and go back to your apartment to try and live a normal life.",
             options: [
-                { text: "...", nextScene: 92 },//find the others
-                // { text: "Turn back. Not much time", nextScene: 86 },//escape
-                // { text: "Omega", nextScene: 76 },
-                // { text: "Start Over", nextScene: 62 },
-            ]
-        },
-        92: {
-            background: "./images/scene1.jpg",
-            story: "BioZynth is done. You spend several days with the cats until everything calms down. You adopt Psi and go back to your apartment to try and live a normal life.",
-            options: [
                 { text: "...", nextScene: 93 },//find the others
                 // { text: "Turn back. Not much time", nextScene: 86 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
             ]
-        }, 
+        },
+        // 92: {
+        //     background: "./images/scene1.jpg",
+        //     story: "BioZynth is done. You spend several days with the cats until everything calms down. You adopt Psi and go back to your apartment to try and live a normal life.",
+        //     options: [
+        //         { text: "...", nextScene: 93 },//find the others
+        //         // { text: "Turn back. Not much time", nextScene: 86 },//escape
+        //         // { text: "Omega", nextScene: 76 },
+        //         // { text: "Start Over", nextScene: 62 },
+            //]
+        //}, 
         93: {
             background: "./images/reference11.jpg",
             story: "Life seems calm. At last, everything is back to normal. Or is it?",
@@ -883,9 +897,9 @@ function startGame() {
         }, 
         94: {
             background: "./images/evilcats.png",
-            story: "",
+            story: "It seems that BioZynth is not done with you...",
             options: [
-                { text: "...", nextScene: 5 },//find the others
+                { text: "...", nextScene: 1 },//find the others
                 // { text: "Turn back. Not much time", nextScene: 86 },//escape
                 // { text: "Omega", nextScene: 76 },
                 // { text: "Start Over", nextScene: 62 },
@@ -903,7 +917,7 @@ function startGame() {
             background: "./images/reference44.png",
             story: "You find yourself in a room with 3 doors. Door 1: Psi Door 2: '2' Door 3: Omega",
             options: [
-                { text: "Psi", nextScene: 64 },
+                { text: "Psi", nextScene: 221 },
                 { text: "2", nextScene: 202 },
                 { text: "Omega", nextScene: 68 },
                 { text: "Start Over", nextScene: 62 },
@@ -922,8 +936,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: '9' Door 2: Delta Door 3: Gamma",
             options: [
                 { text: "9", nextScene: 204 },
-                { text: "Delta", nextScene: 202 },
-                { text: "Gamma", nextScene: 68 },
+                { text: "Delta", nextScene: 227 },
+                { text: "Gamma", nextScene: 70 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -940,8 +954,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: '15' Door 2: Kappa Door 3: '18'",
             options: [
                 { text: "15", nextScene: 206 },
-                { text: "Kappa", nextScene: 202 },
-                { text: "18", nextScene: 68 },
+                { text: "Kappa", nextScene: 255 },
+                { text: "18", nextScene: 206 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -957,9 +971,9 @@ function startGame() {
             background: "./images/reference43.png",
             story: "You find yourself in a room with 3 doors. Door 1: '20' Door 2: '6' Door 3: Iota",
             options: [
-                { text: "20", nextScene: 207 },
+                { text: "20", nextScene: 216 },
                 { text: "6", nextScene: 208 },
-                { text: "Iota", nextScene: 68 },
+                { text: "Iota", nextScene: 227 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -993,7 +1007,7 @@ function startGame() {
             background: "./images/reference44.png",
             story: "You find yourself in a room with 3 doors. Door 1: Omicron Door 2: '7' Door 3: '13'",
             options: [
-                { text: "Omicron", nextScene: 210 },
+                { text: "Omicron", nextScene: 249 },
                 { text: "7", nextScene: 202 },
                 { text: "13", nextScene: 212 },
                 { text: "Start Over", nextScene: 62 },
@@ -1011,9 +1025,9 @@ function startGame() {
             background: "./images/reference41.png",
             story: "You find yourself in a room with 3 doors. Door 1: '6' Door 2: '19' Door 3: Xi",
             options: [
-                { text: "6", nextScene: 210 },
+                { text: "6", nextScene: 219 },
                 { text: "19", nextScene: 214 },
-                { text: "Xi", nextScene: 212 },
+                { text: "Xi", nextScene: 66 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1030,8 +1044,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: '7' Door 2: Beta Door 3: '2'",
             options: [
                 { text: "7", nextScene: 216 },
-                { text: "Beta", nextScene: 214 },
-                { text: "2", nextScene: 212 },
+                { text: "Beta", nextScene: 68 },
+                { text: "2", nextScene: 223 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1043,6 +1057,8 @@ function startGame() {
                 { text: "Go back", nextScene: 215 }
             ]
         }, 
+
+        //This is the path to the right
         217: {
             background: "./images/hallway11.jpg",
             story: "There is a long hallway",
@@ -1056,8 +1072,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Omega Door 3: '13'",
             options: [
                 { text: "Alpha", nextScene: 219 },
-                { text: "Omega", nextScene: 214 },
-                { text: "13", nextScene: 212 },
+                { text: "Omega", nextScene: 227 },
+                { text: "13", nextScene: 206 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1073,9 +1089,9 @@ function startGame() {
             background: "./images/reference47.png",
             story: "You find yourself in a room with 3 doors. Door 1: Delta Door 2: Beta Door 3: '9'",
             options: [
-                { text: "Delta", nextScene: 219 },
+                { text: "Delta", nextScene: 208 },
                 { text: "Beta", nextScene: 221 },
-                { text: "9", nextScene: 212 },
+                { text: "9", nextScene: 237 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1091,9 +1107,9 @@ function startGame() {
             background: "./images/reference40.png",
             story: "You find yourself in a room with 3 doors. Door 1: Op-silon Door 2: Gamma Door 3: '8'",
             options: [
-                { text: "Op-silon", nextScene: 219 },
+                { text: "Op-silon", nextScene: 70 },
                 { text: "Gamma", nextScene: 223 },
-                { text: "8", nextScene: 212 },
+                { text: "8", nextScene: 66 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1110,8 +1126,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Delta Door 2: '15' Door 3: '7'",
             options: [
                 { text: "Delta", nextScene: 225 },
-                { text: "15", nextScene: 223 },
-                { text: "7", nextScene: 212 },
+                { text: "15", nextScene: 78 },
+                { text: "7", nextScene: 259 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1127,7 +1143,7 @@ function startGame() {
             background: "./images/reference49.png",
             story: "You find yourself in a room with 3 doors. Door 1: '12' Door 2: Psi Door 3: Epsilon",
             options: [
-                { text: "12", nextScene: 225 },
+                { text: "12", nextScene: 74 },
                 { text: "Psi", nextScene: 223 },
                 { text: "Epsilon", nextScene: 227 },
                 { text: "Start Over", nextScene: 62 },
@@ -1146,9 +1162,9 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Zeta Door 2: '13' Door 3: Sigma",
             options: [
                 { text: "Zeta", nextScene: 229 },
-                { text: "13", nextScene: 223 },
+                { text: "13", nextScene: 233 },
                 { text: "Sigma", nextScene: 227 },
-                { text: "Start Over", nextScene: 62 },
+                { text: "Start Over", nextScene: 206 },
             ]
         }, 
         229: {
@@ -1163,9 +1179,9 @@ function startGame() {
             background: "./images/reference44.png",
             story: "You find yourself in a room with 3 doors. Door 1: '19' Door 2: Eta Door 3: Delta",
             options: [
-                { text: "19", nextScene: 229 },
+                { text: "19", nextScene: 253 },
                 { text: "Eta", nextScene: 231 },
-                { text: "Delta", nextScene: 227 },
+                { text: "Delta", nextScene: 231 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1181,7 +1197,7 @@ function startGame() {
             background: "./images/reference50.png",
             story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Theta Door 3: '2'",
             options: [
-                { text: "Rho", nextScene: 229 },
+                { text: "Rho", nextScene: 223 },
                 { text: "Theta", nextScene: 233 },
                 { text: "2", nextScene: 227 },
                 { text: "Start Over", nextScene: 62 },
@@ -1199,8 +1215,8 @@ function startGame() {
             background: "./images/reference46.png",
             story: "You find yourself in a room with 3 doors. Door 1: '20' Door 2: Epsilon Door 3: Iota",
             options: [
-                { text: "20", nextScene: 229 },
-                { text: "Epsilon", nextScene: 233 },
+                { text: "20", nextScene: 62 },
+                { text: "Epsilon", nextScene: 235 },
                 { text: "Iota", nextScene: 235 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1217,8 +1233,8 @@ function startGame() {
             background: "./images/reference43.png",
             story: "You find yourself in a room with 3 doors. Door 1: Tau Door 2: '19' Door 3: Kappa",
             options: [
-                { text: "Tau", nextScene: 229 },
-                { text: "19", nextScene: 233 },
+                { text: "Tau", nextScene: 74 },
+                { text: "19", nextScene: 225 },
                 { text: "Kappa", nextScene: 237 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1235,8 +1251,8 @@ function startGame() {
             background: "./images/reference41.png",
             story: "You find yourself in a room with 3 doors. Door 1: '6' Door 2: Mu Door 3: Lambda",
             options: [
-                { text: "6", nextScene: 229 },
-                { text: "Mu", nextScene: 233 },
+                { text: "6", nextScene: 265 },
+                { text: "Mu", nextScene: 62 },
                 { text: "Lambda", nextScene: 239 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1254,8 +1270,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Mu Door 2: Nu Door 3: '7'",
             options: [
                 { text: "Mu", nextScene: 241 },
-                { text: "Nu", nextScene: 233 },
-                { text: "7", nextScene: 239 },
+                { text: "Nu", nextScene: 62 },
+                { text: "7", nextScene: 241 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1272,7 +1288,7 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Mu Door 2: '13' Door 3: Nu",
             options: [
                 { text: "Mu", nextScene: 241 },
-                { text: "13", nextScene: 233 },
+                { text: "13", nextScene: 70 },
                 { text: "Nu", nextScene: 243 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1289,9 +1305,9 @@ function startGame() {
             background: "./images/reference47.png",
             story: "You find yourself in a room with 3 doors. Door 1: Alpha Door 2: Xi Door 3: '33'",
             options: [
-                { text: "Alpha", nextScene: 241 },
+                { text: "Alpha", nextScene: 245 },
                 { text: "Xi", nextScene: 245 },
-                { text: "33", nextScene: 243 },
+                { text: "33", nextScene: 245 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1308,8 +1324,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Omicron Door 2: Pi Door 3: '21'",
             options: [
                 { text: "Omicron", nextScene: 247 },
-                { text: "Pi", nextScene: 245 },
-                { text: "21", nextScene: 243 },
+                { text: "Pi", nextScene: 62 },
+                { text: "21", nextScene: 62 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1325,9 +1341,9 @@ function startGame() {
             background: "./images/reference40.png",
             story: "You find yourself in a room with 3 doors. Door 1: '2' Door 2: Pi Door 3: Iota",
             options: [
-                { text: "2", nextScene: 247 },
+                { text: "2", nextScene: 204 },
                 { text: "Pi", nextScene: 249 },
-                { text: "Iota", nextScene: 243 },
+                { text: "Iota", nextScene: 202 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1344,8 +1360,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Rho Door 2: Eta Door 3: '8'",
             options: [
                 { text: "Rho", nextScene: 251 },
-                { text: "Eta", nextScene: 249 },
-                { text: "8", nextScene: 243 },
+                { text: "Eta", nextScene: 229 },
+                { text: "8", nextScene: 62 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1362,7 +1378,7 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Chi Door 2: '7' Door 3: Sigma",
             options: [
                 { text: "Chi", nextScene: 251 },
-                { text: "7", nextScene: 249 },
+                { text: "7", nextScene: 70 },
                 { text: "Sigma", nextScene: 253 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1380,8 +1396,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Tau Door 2: '20' Door 3: Sigma",
             options: [
                 { text: "Tau", nextScene: 255 },
-                { text: "20", nextScene: 249 },
-                { text: "Sigma", nextScene: 253 },
+                { text: "20", nextScene: 62 },
+                { text: "Sigma", nextScene: 204 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -1398,8 +1414,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Op-Silon Door 2: Psi Door 3: '4'",
             options: [
                 { text: "Op-Silon", nextScene: 257 },
-                { text: "Psi", nextScene: 249 },
-                { text: "4", nextScene: 253 },
+                { text: "Psi", nextScene: 257 },
+                { text: "4", nextScene: 263 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -1415,9 +1431,9 @@ function startGame() {
             background: "./images/reference49.png",
             story: "You find yourself in a room with 3 doors. Door 1: '15' Door 2: Fie Door 3: Theta",
             options: [
-                { text: "15", nextScene: 240 },
+                { text: "15", nextScene: 256 },
                 { text: "Fie", nextScene: 259 },
-                { text: "Theta", nextScene: 253 },
+                { text: "Theta", nextScene: 62 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -1433,9 +1449,9 @@ function startGame() {
             background: "./images/reference46.png",
             story: "You find yourself in a room with 3 doors. Door 1: '18' Door 2: Chi Door 3: Alpha",
             options: [
-                { text: "18", nextScene: 240 },
+                { text: "18", nextScene: 62 },
                 { text: "Chi", nextScene: 261 },
-                { text: "Alpha", nextScene: 253 },
+                { text: "Alpha", nextScene: 202 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -1451,8 +1467,8 @@ function startGame() {
             background: "./images/reference43.png",
             story: "You find yourself in a room with 3 doors. Door 1: Omega Door 2: '5' Door 3: Psi",
             options: [
-                { text: "Omega", nextScene: 240 },
-                { text: "5", nextScene: 261 },
+                { text: "Omega", nextScene: 62 },
+                { text: "5", nextScene: 206 },
                 { text: "Psi", nextScene: 263 },
                 { text: "Start Over", nextScene: 62 },
             ]
@@ -1470,8 +1486,8 @@ function startGame() {
             story: "You find yourself in a room with 3 doors. Door 1: Omega Door 2: '26' Door 3: Alpha",
             options: [
                 { text: "Omega", nextScene: 265 },
-                { text: "26", nextScene: 261 },
-                { text: "Alpha", nextScene: 263 },
+                { text: "26", nextScene: 208 },
+                { text: "Alpha", nextScene: 217 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },

@@ -14,14 +14,17 @@ body {
 }
 
 #story {
-    background-color: black;
+    background-color: white;
     font-size: 24px;
     display: flex;
     margin-bottom: 20px;
-    color: whitesmoke;
+    color: black;
     flex-direction: row; 
     align-items: center;
     justify-content: flex-end;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Comic Neue', cursive;
+    height: 40px;
 
 }
 
@@ -44,6 +47,9 @@ button {
     background-color: yellow;
     color: black;
     display: flex;
+    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Comic Neue', cursive;
+    text-transform: uppercase;
   
   }
 
@@ -57,3 +63,6 @@ button {
     margin-bottom: 10px;
 
   }
+
+  /* font-family: 'Archivo Black', sans-serif;
+font-family: 'Comic Neue', cursive; */
