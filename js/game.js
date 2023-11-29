@@ -1,11 +1,12 @@
+const backGroundAudio = document.getElementById('backgroundAudio')
 const storyElement = document.getElementById('story');
 const optionsElement = document.getElementById('options');
-window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.1;
-    audio.play();
+// window.addEventListener("DOMContentLoaded", event => {
+//     const audio = document.querySelector("audio");
+//     audio.volume = 0.1;
+//     audio.play();
 
-  });
+//   });
 
 
 // Initial game state
@@ -63,6 +64,9 @@ function goToScene(sceneNumber) {
     updateGame();
 }
 function startGame() {
+    backGroundAudio.play()
+    backGroundAudio.volume = 0.1
+    backGroundAudio.loop = true
     scenes = {
         1: {
             background: "./images/ImpulseZone.png",
@@ -263,7 +267,7 @@ function startGame() {
             background: "./images/reference30.png",
             story: "I need you to answer the question, it's for your own good.",
             options: [
-                { text: "I do", nextScene: 22 },
+                { text: "I am", nextScene: 22 },
                 { text: "There was a talking cat", nextScene: 27 } //vent scene
             ]
         },
@@ -333,7 +337,7 @@ function startGame() {
         },
         30: {
             background: "./images/reference51.png",
-            story: "Why did you answer the door? I told you we had to go.",
+            story: "Dude, you need to follow my directions. I'm trying to help you.",
             options: [
                 { text: "I, well I still can't believe I'm having a conversation with a cat", nextScene: 31 },
                 { text: "...", nextScene: 31 }
@@ -455,7 +459,7 @@ function startGame() {
         },
         45: {
             background: "./images/reference68.png",
-            story: "Your skills,your unique talents, and the data you posess from their server are the missing pieces to this puzzle. We're up against a behemoth, and the more allies we gather, the better our chances. Together, we can bring down BioZynth Corporation and expose their dark machinations. So, what do you say?",
+            story: "Your knowledge of the facility,your your bravery, and the data you posess from their server are the missing pieces to this puzzle. We're up against a behemoth, and the more allies we gather, the better our chances. Together, we can bring down BioZynth Corporation and expose their dark machinations. So, what do you say?",
             options: [
                 { text: "I have so many questions", nextScene: 43 },
                 { text: "I'm ready", nextScene: 48 },//next scene
@@ -463,7 +467,7 @@ function startGame() {
         },
         46: {
             background: "./images/reference68.png",
-            story: "BioZynth Corporation, the puppet master behind the scenes, has been conducting experiments that would make your hair stand on end. Lab-made cats, like our friends here, enhanced and manipulated for purposes we're only beginning to unravel.",
+            story: "BioZynth Corporation, the puppet master behind the scenes, has been conducting experiments that would make your hair stand on end. Lab-made cats, like our friends here, are being enhanced and manipulated for purposes we're only beginning to unravel.",
             options: [
                 { text: "I have so many questions", nextScene: 43 },
                 { text: "I'm ready", nextScene: 48 },//next scene
@@ -495,7 +499,7 @@ function startGame() {
         },
         51: {
             background: "./images/reference35.jpg",
-            story: "Our mission is to break in, delete the servers and rescue as many animals as possible.",
+            story: "Our mission is to break in, delete the servers and rescue as many animals as possible. We'll be providing remote assistance from here but we're afraid it won't be much. BioZynth is always updating their security",
             options: [
                 { text: "Sounds easy", nextScene: 52 },
                 { text: "Sounds difficult", nextScene: 53 }
@@ -503,7 +507,7 @@ function startGame() {
         },
         52: {
             background: "./images/reference35.jpg",
-            story: "Sure, but there might be some unexpected obstacles. We won't know for sure until we break in.  ",
+            story: "We can't be sure. There might be some unexpected obstacles. We won't know for sure until we break in.  ",
             options: [
                 { text: "Obstacles?", nextScene: 53 },
                 // { text: "Walk away", nextScene: 5 }
@@ -527,7 +531,7 @@ function startGame() {
         },
         55: {
             background: "./images/reference70.png",
-            story: "You meet Psi outside. He motions for you to follow. You walk through back alleys and hidden paths for what seems like an hour. You reach a part of the city that you've never seen before. He stops and turns left at the end of an alley. ",
+            story: "You meet Psi outside. He motions for you to follow. You walk through back alleys and hidden paths for what seems like 3 hours. You reach a part of the city that you've never seen before. He stops and turns left at the end of an alley. ",
             options: [
                 { text: "Are we here?", nextScene: 56 },
                 // { text: "Walk away", nextScene: 5 }
@@ -543,9 +547,11 @@ function startGame() {
         },
         57: {
             background: "./images/reference65.jpg",
-            story: "It looks like you have to guess the secret number...",
+            story: "It looks like we have to input a number...",
             options: [
-                { text: "Guess the number", nextScene: 58 },  //possible minigame
+                { text: "1771", nextScene: 5 },
+                { text: "1234", nextScene: 5 }, 
+                { text: "2816", nextScene: 58 },   //possible minigame
                 { text: "Give up", nextScene: 5 }
             ]
         },
@@ -769,8 +775,8 @@ function startGame() {
             story: "You find yourself in a giant room. It seems to be the server room. At last!",
             options: [
                 { text: "Find the control room", nextScene: 82 },
-                { text: "", nextScene: 78 },
-                { text: "Omega", nextScene: 76 },
+                { text: "Go back into the maze", nextScene: 241 },
+                { text: "Start smashing everything", nextScene: 5 },
                 { text: "Start Over", nextScene: 62 },
             ]
         },
@@ -779,8 +785,7 @@ function startGame() {
             story: "This is it! We need to erase all the data. ",
             options: [
                 { text: "Hack into their systems", nextScene: 83 },
-                { text: "", nextScene: 78 },
-                { text: "Omega", nextScene: 76 },
+                { text: "Run away", nextScene: 5 },
                 { text: "Start Over", nextScene: 62 },
             ]
         }, 
@@ -846,7 +851,7 @@ function startGame() {
         },
         89: {
             background: "./images/guardschasing.png",
-            story: "You are running as fast as you can, you can feel the guards getting closer. You see the exit door at the end",
+            story: "You are running as fast as you can all the cats are following you. You can feel the guards getting closer. You see the exit door at the end",
             options: [
                 { text: "Go through the door", nextScene: 90 },
                 { text: "Stay and fight", nextScene: 5 }//find the others
