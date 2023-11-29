@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
 
 // Initial game state
-let currentScene = 62;
+let currentScene = 1;
 
 // Declare an empty variable for the player name
 let playerName = "";
