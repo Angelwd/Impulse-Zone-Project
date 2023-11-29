@@ -47,12 +47,13 @@ button {
   
   }
 
-  #player-button{
+  #input-div{
 
     display: flex;
     justify-content: center;
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 10px;
+
   }
